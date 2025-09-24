@@ -23,7 +23,7 @@ jobs:
 
       - name: Fetch container configuration and use output
         id: config
-        uses: gbraad-actions/shared-config@v2
+        uses: gbraad-actions/shared-config@main
         with:
           config_file: containers/${{ inputs.container_name }}.ini
           use_output: true
