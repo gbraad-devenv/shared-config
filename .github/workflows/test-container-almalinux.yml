@@ -1,0 +1,17 @@
+name: Test AlmaLinux container
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+  pull_request: {}
+
+
+jobs:
+  test:
+    name: Test pull - AlmaLinux
+    uses: ./.github/workflows/reusable-test-container.yml
+    with:
+      container_name: "almalinux"
+    secrets: inherit

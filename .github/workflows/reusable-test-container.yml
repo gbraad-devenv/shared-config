@@ -31,7 +31,7 @@ jobs:
   test-arm64:
     needs: shared-config
     name: Test ARM64
-    runs-on: ubuntu-latest-arm
+    runs-on: ubuntu-24.04-arm
     steps:
       - name: Test pull image
         run: |
@@ -40,7 +40,7 @@ jobs:
   test-amd64:
     needs: shared-config
     name: Test AMD64
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - name: Test pull image
         run: |

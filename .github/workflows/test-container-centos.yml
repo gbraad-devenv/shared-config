@@ -1,0 +1,17 @@
+name: Test CentOS container
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+  pull_request: {}
+
+
+jobs:
+  test:
+    name: Test pull - CentOS
+    uses: ./.github/workflows/reusable-test-container.yml
+    with:
+      container_name: "centos"
+    secrets: inherit

@@ -1,0 +1,17 @@
+name: Test Alpine container
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - "main"
+  pull_request: {}
+
+
+jobs:
+  test:
+    name: Test pull - Alpine
+    uses: ./.github/workflows/reusable-test-container.yml
+    with:
+      container_name: "alpine"
+    secrets: inherit
