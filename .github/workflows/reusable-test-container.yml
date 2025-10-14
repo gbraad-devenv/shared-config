@@ -25,7 +25,7 @@ jobs:
         id: config
         uses: gbraad-actions/shared-config@main
         with:
-          config_file: containers/${{ inputs.container_name }}.ini
+          config_file: containers/gbraad-dotfiles/upstream/${{ inputs.container_name }}.ini
           use_output: true
 
   test-arm64:
